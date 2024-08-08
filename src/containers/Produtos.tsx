@@ -5,12 +5,13 @@ import * as S from './styles'
 
 const ProdutosComponent = () => {
   const { data: produtos, isLoading } = useGetProdutosQuery()
-  }
+
+  if (isLoading) return <h2>Carregando...</h2>
 
   return (
     <>
       <S.Produtos>
-      {produtos?.map((produto) => (
+        {produtos?.map((produto) => (
           <Produto key={produto.id} produto={produto} favorito={produto} />
         ))}
       </S.Produtos>

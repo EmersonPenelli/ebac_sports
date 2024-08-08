@@ -6,7 +6,6 @@ import {
   estaNosFavoritos
 } from '../../store/reducers/favoritos'
 import { RootReducer } from '../../store'
-
 import * as S from './styles'
 
 type Props = {

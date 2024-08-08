@@ -1,12 +1,10 @@
 import { Provider } from 'react-redux'
-
+//Componentes e Containers
 import Header from './components/Header'
 import Produtos from './containers/Produtos'
-
-//styles
+// Styles
 import { GlobalStyle } from './styles'
-
-//redux
+//Redux
 import { store } from './store'
 
 export type Produto = {
@@ -18,12 +16,12 @@ export type Produto = {
 
 function App() {
   return (
-    <>
     <Provider store={store}>
+      <GlobalStyle />
+      <div className="container">
         <Header />
         <Produtos />
       </div>
-    </>
     </Provider>
   )
 }
